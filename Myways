@@ -1,0 +1,27 @@
+
+function fizzbuzz(phoneNumber) {
+    let number = `${phoneNumber}`;
+    let sum = 0;
+    let output = "";
+
+    for (let i in number) {
+        sum += +number[i];
+    }
+    for (let i = 1; i < sum + 1; ++i) {
+        let dibBy3 = i % 3 == 0;
+        let dibBy4 = i % 4 == 0;
+        if (dibBy3 && dibBy4) {
+            output += "FizzBuzz ";
+        } else if (dibBy3) {
+            output += "Fizz ";
+
+        } else if (dibBy4) {
+            output += "Buzz ";
+        } else
+            output += `${i} `;
+    }
+    return output;
+
+}
+
+console.log(fizzbuzz(9587496807));
